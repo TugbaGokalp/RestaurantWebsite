@@ -166,6 +166,11 @@ header .buttons button {
   justify-content: space-between;
 }
 
+.menu .box-container .box:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
 .heading {
   color: #fff;
   text-transform: uppercase;
