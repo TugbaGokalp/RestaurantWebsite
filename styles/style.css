@@ -42,6 +42,7 @@ section {
   font-size: 1.7rem;
   color: #fff;
   background-color: var(--black-color);
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -396,3 +397,64 @@ header .buttons button {
 }
 
 /* review end */
+
+/* contact start */
+
+.contact .row {
+  display: flex;
+  background-color: var(--black-color);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .row form h3 {
+  font-size: 3.5rem;
+  color: #fff;
+}
+
+.contact .row form .inputBox {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  border: var(--border);
+}
+
+.contact .row form .inputBox i {
+  color: #fff;
+  padding-left: 2rem;
+  font-size: 2rem;
+}
+
+.contact .row form .inputBox input {
+  font-size: 1.7rem;
+  width: 100%;
+  padding: 2rem;
+  color: #fff;
+  text-transform: none;
+  background: none;
+}
+
+.contact .row form .btn {
+  color: var(--main-color);
+  background-color: #fff;
+}
+
+.contact .row form .btn:hover {
+  color: #fff;
+  background-color: var(--main-color);
+  transform: scale(1.05);
+}
+
+/* contact end */
