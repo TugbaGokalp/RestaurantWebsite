@@ -69,6 +69,14 @@ a {
   text-decoration: none;
 }
 
+.search-input {
+  font-size: 1.6rem;
+  color: var(--black-color);
+  padding: 1rem;
+  border-radius: 3rem;
+  text-transform: none;
+}
+
 /* header start */
 
 header {
@@ -514,3 +522,27 @@ header .buttons button {
 }
 
 /* blogs end  */
+
+/* footer start */
+
+.footer {
+  background-color: var(--black-color);
+  text-align: center;
+}
+
+.footer .search {
+  display: flex;
+  justify-content: center;
+}
+
+.footer .search .search-input {
+  width: 30rem;
+}
+
+.footer .search .btn-primary {
+  background-color: var(--main-color);
+  padding: 1rem 2rem;
+  margin-left: 1rem;
+  margin-top: 0;
+}
+/* footer end  */
