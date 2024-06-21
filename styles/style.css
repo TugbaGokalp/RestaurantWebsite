@@ -565,4 +565,39 @@ header .buttons button {
   background-color: var(--main-color);
   transform: scale(1.1);
 }
+
+.footer .links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer .links a {
+  background-color: var(--main-color);
+  padding: 0.7rem 2rem;
+  color: #fff;
+  font-size: 2rem;
+  border: var(--border);
+}
+
+.footer .links a:hover {
+  background-color: var(--black-color);
+}
+
+.footer .links a.active {
+  background-color: var(--black-color);
+}
+
+.footer .credit {
+  font-size: 1.7rem;
+  color: #fff;
+  font-weight: 300;
+  padding-top: 2rem;
+}
+
+.footer .credit span {
+  color: var(--main-color);
+}
+
 /* footer end  */
