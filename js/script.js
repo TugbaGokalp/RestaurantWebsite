@@ -14,3 +14,19 @@ searchBtn.addEventListener("click", function () {
     }
   });
 });
+
+// opening and closing the shopping cart
+
+const cartBtn = document.querySelector("#cartBtn");
+const cart = document.querySelector(".cart-items-container");
+
+cartBtn.addEventListener("click", function () {
+  cart.classList.toggle("active");
+  document.addEventListener("click", function (e) {
+    if (
+      !e.composedPath().includes(cartBtn) & !e.composedPath().includes(cart)
+    ) {
+      cart.classList.remove("active");
+    }
+  });
+});
