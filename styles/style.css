@@ -155,7 +155,7 @@ header .buttons button {
   max-height: max-content;
   background-color: #fff;
   box-shadow: 0px 20px 14px 0px rgb(0, 0, 0, 0.75);
-  right: -100%;
+  right: -120%;
 }
 
 .header .cart-items-container.active {
@@ -704,6 +704,10 @@ header .buttons button {
     height: 7rem;
   }
 
+  .home {
+    margin-top: -11.5rem;
+  }
+
   section {
     padding: 2rem;
   }
@@ -715,7 +719,11 @@ header .buttons button {
 
 @media (max-width: 768px) {
   #menu-btn {
-    display: block;
+    display: inline-block;
+  }
+
+  .home {
+    margin-top: -11.5rem;
   }
 
   .header .navbar {
@@ -739,5 +747,15 @@ header .buttons button {
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
+  }
+
+  .header .search-form {
+    width: unset;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 50%;
   }
 }
