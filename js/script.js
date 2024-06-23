@@ -108,3 +108,52 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+// search-scroll
+
+document.addEventListener("DOMContentLoaded", function () {
+  const searchBtn = document.querySelector("#searchBoxBtn");
+  const searchBox = document.querySelector("#search-box");
+  const arrowDown = document.querySelector(".fa-arrow-down");
+  let currentResultIndex = -1;
+  let results = [];
+
+  searchBtn.addEventListener("click", () => {
+    const query = searchBox.value.toLowerCase();
+    searchContent(query);
+  });
+
+  searchBox.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+      const query = searchBox.value.toLowerCase();
+      searchContent(query);
+    }
+  });
+
+  arrowDown.addEventListener("click", () => {
+    if (results.length > 0 && currentResultIndex < results.length - 1) {
+      currentResultIndex++;
+      results[currentResultIndex].scrollIntoView({ behavior: "smooth" });
+    }
+  });
+
+  function searchContent(query) {
+    const sections = document.querySelectorAll("section");
+    results = [];
+    currentResultIndex = -1;
+
+    sections.forEach((section) => {
+      const content = section.innerText.toLowerCase();
+      if (content.includes(query)) {
+        results.push(section);
+      }
+    });
+
+    if (results.length > 0) {
+      currentResultIndex = 0;
+      results[currentResultIndex].scrollIntoView({ behavior: "smooth" });
+    } else {
+      alert("No results found");
+    }
+  }
+});
