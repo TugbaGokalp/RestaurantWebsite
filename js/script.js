@@ -46,3 +46,67 @@ menuBtn.addEventListener("click", function () {
     }
   });
 });
+
+//! footer link scrolling
+
+const navLinks = document.querySelectorAll(".navbar a");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    navLinks.forEach((navLink) => navLink.classList.remove("active"));
+    this.classList.add("active");
+  });
+});
+
+const sections = document.querySelectorAll("section");
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  // Finding the one in view by navigating through all sections
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  // Make the link in the navbar that belongs to the section in view 'active'
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href").includes(current)) {
+      link.classList.add("active");
+    }
+  });
+});
+
+//! footer link scrolling
+
+const footerLinks = document.querySelectorAll(".links a");
+
+footerLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    footerLinks.forEach((navLink) => navLink.classList.remove("active"));
+    this.classList.add("active");
+  });
+});
+
+const sectionsFooter = document.querySelectorAll("section");
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sectionsFooter.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  footerLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href").includes(current)) {
+      link.classList.add("active");
+    }
+  });
+});
