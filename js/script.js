@@ -2,15 +2,20 @@
 
 const searchForm = document.querySelector(".search-form");
 const searchBtn = document.querySelector("#searchBtn");
+const searchBox = document.querySelector("#search-box");
 
 searchBtn.addEventListener("click", function () {
   searchForm.classList.toggle("active");
+  if (!searchForm.classList.contains("active")) {
+    searchBox.value = "";
+  }
   document.addEventListener("click", function (e) {
     if (
       !e.composedPath().includes(searchBtn) &
       !e.composedPath().includes(searchForm)
     ) {
       searchForm.classList.remove("active");
+      searchBox.value = "";
     }
   });
 });
